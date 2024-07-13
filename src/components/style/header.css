@@ -1,0 +1,8 @@
+.header {
+    background-image: url('../../assets/book-bg-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 100%;
+    background-position: center;
+}

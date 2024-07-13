@@ -1,4 +1,5 @@
 import { BookInfoType } from '../types';
+import './style/book.css';
 
 type BookProps = {
   bookInfo: BookInfoType;
@@ -14,11 +15,15 @@ export default function Book(props: BookProps) {
   return (
     <div className="book">
       <img src={ image } alt={ title } />
-      <h1>{ title }</h1>
-      <h3>{ author }</h3>
-      { showDetails && (
-        <p>{ description }</p>
-      ) }
+      <div className="card-information">
+        <h1>{ title }</h1>
+        <h3>{ author }</h3>
+        { showDetails && (
+          <div>
+            <p>{ description }</p>
+          </div>
+        ) }
+      </div>
     </div>
   );
 }

@@ -14,8 +14,8 @@ function Modal({ isOpen, title, image, handleOpenModal }: ModalProps) {
         <section className="container-modal">
           <div className="content-modal">
             <img src={ image } alt={ title } />
-            <h4>{`LIVRO: ${title}`}</h4>
-            <p>
+            <h4 style={ { color: 'white' } }>{`LIVRO: ${title}`}</h4>
+            <p style={ { color: 'white' } }>
               Adicionado com sucesso!!
             </p>
             <button

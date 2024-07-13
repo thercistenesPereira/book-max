@@ -1,0 +1,12 @@
+.book {
+    max-height: 17rem;
+    max-width: 50%;
+}
+
+.card-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 60%;
+    margin-right: 1rem;
+}

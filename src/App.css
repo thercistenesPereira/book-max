@@ -10,6 +10,9 @@
 
 .app {
   margin: 30px 50px 0;
+  background-color: beige;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .book {
@@ -28,8 +31,9 @@
 }
 
 .book-selector {
-  align-items: flex-start;
   display: flex;
+  justify-content: space-between;
+  margin: 0 6rem;
 }
 
 .selector-buttons {
@@ -68,6 +72,7 @@
   display: flex;
   flex: 0 1 32%;
   height: 100px;
+  background-color: #bca2c4;
 }
 
 li > .book {
@@ -75,4 +80,39 @@ li > .book {
   gap: 0 15px;
   height: 100px;
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #3E383E;
+}
+
+.buttonBook {
+  background-color: #C86EE1;
+  border: 2px solid #5D0973;
+  color: #3E383E;
+  transition: all .5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5D0973;
+    color: white;
+  }
+}
+
+.buttonList {
+  background-color: #5D0973;
+  color: white;
+  transition: all .5s;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #C86EE1;
+    color: #3E383E;
+  }
+}
+
+.titleList {
+  text-align: center;
+  padding-bottom: 2rem;
 }
