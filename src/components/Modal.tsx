@@ -4,9 +4,10 @@ type ModalProps = {
   isOpen: boolean;
   title: string;
   image: string;
+  handleOpenModal: () => void;
 };
 
-function Modal({ isOpen, title, image }: ModalProps) {
+function Modal({ isOpen, title, image, handleOpenModal }: ModalProps) {
   return (
     <section>
       {isOpen && (
@@ -15,11 +16,14 @@ function Modal({ isOpen, title, image }: ModalProps) {
             <img src={ image } alt={ title } />
             <h4>{`LIVRO: ${title}`}</h4>
             <p>
-              Adicionado com sucesso à lista de
-              {' '}
-              <span>desejo!!</span>
+              Adicionado com sucesso!!
             </p>
-            <button className="button-modal">OK</button>
+            <button
+              className="button-modal"
+              onClick={ () => handleOpenModal() }
+            >
+              OK
+            </button>
           </div>
         </section>
       )}
