@@ -1,6 +1,19 @@
 .book-list {
     padding: 0 2rem;
-    display: flex;
-   
+    display: flex; 
     width: calc(50% -1rem);
+}
+
+.button-trash {
+    background-color: transparent;
+    background-image: url('../../assets/trash.png');
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    color: transparent;
+    border: none;
+    margin-top: 1.5rem;
+    margin-left: 5rem;
+    cursor: pointer;
 }

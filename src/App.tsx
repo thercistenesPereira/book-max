@@ -46,6 +46,10 @@ function App() {
     }
   };
 
+  const removeFromWishList = (bookId: number) => {
+    setWishList(wishList.filter((book) => book.id !== bookId));
+  };
+
   const addToReadList = (book: BookInfoType) => {
     if (!readList.some((item) => item.id === book.id)) {
       setReadList([...readList, book]);
@@ -55,12 +59,33 @@ function App() {
     }
   };
 
+  const removeFromReadList = (bookId: number) => {
+    setReadList(readList.filter((book) => book.id !== bookId));
+  };
+
   const addToReadingList = (book: BookInfoType) => {
     if (!readingList.some((item) => item.id === book.id)) {
       setReadingList([...readingList, book]);
       handleOpenModal();
     } else {
       alert();
+    }
+  };
+
+  const removeFromReadingList = (bookId: number) => {
+    setReadingList(readingList.filter((book) => book.id !== bookId));
+  };
+
+  const getRemoveFunction = () => {
+    switch (currentList) {
+      case 'wishList':
+        return removeFromWishList;
+      case 'readList':
+        return removeFromReadList;
+      case 'readingList':
+        return removeFromReadingList;
+      default:
+        return () => {};
     }
   };
 
@@ -125,7 +150,10 @@ function App() {
           </button>
         </div>
         <h1 className="titleList">{`Lista de ${listName[currentList]}`}</h1>
-        <BookList books={ list[currentList] } />
+        <BookList
+          books={ list[currentList] }
+          getRemoveFunction={ getRemoveFunction() }
+        />
       </div>
     </div>
   );
