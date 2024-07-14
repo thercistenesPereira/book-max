@@ -1,34 +1,41 @@
-# Movies and Series Tracker
+# Book Max
 
-## Descrição
-Um aplicativo de rastreamento de filmes e séries que permite aos usuários adicionar, visualizar e marcar filmes/séries como assistidos e favoritos. Ele também oferece ações rápidas para facilitar a navegação e interação com o conteúdo.
+O **Book List App** é uma aplicação React para gerenciar listas de livros. Os usuários podem adicionar livros a diferentes listas (desejos, leitura e lidos) e removê-los conforme necessário.
 
 ## Funcionalidades
-- **Adicionar Novo Item:** Permite adicionar um novo filme ou série.
-- **Marcar como Assistido:** Alternar o status de um filme ou série como assistido/não assistido.
-- **Favoritos:** Exibir apenas os filmes/séries favoritos.
-- **Contagem de Filmes/Séries:** Exibir a contagem total de filmes/séries, assistidos e favoritos.
+
+- Adicionar livros à lista de desejos, leitura e lidos.
+- Remover livros das listas.
+- Visualizar detalhes dos livros.
+- Navegar entre diferentes listas de livros.
+- Alternar entre livros disponíveis.
 
 ## Tecnologias Utilizadas
-- **React:** Biblioteca JavaScript para construção de interfaces de usuário.
-- **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
-- **CSS:** Para estilização do aplicativo.
+
+- React
+- TypeScript
+- SweetAlert2
+- CSS
+- JSON (para dados estáticos dos livros)
 
 ## Estrutura do Projeto
-```bash
+
+```
 src/
-├── components/
-│   ├── form/
-│   │   └── Add.tsx
-│   ├── header/
-│   │   ├── Header.tsx
-│   │   ├── QuickActions.tsx
-│   │   └── quickActions.css
-│   └── screen-content/
-│       └── ScreenContentCard.tsx
-├── data/
-│   └── movies.ts
-├── App.css
-├── App.tsx
-└── index.tsx
+|-- assets/
+| |-- trash.png
+|-- components/
+| |-- Book.tsx
+| |-- BookList.tsx
+| |-- Header.tsx
+| |-- Modal.tsx
+|-- types/
+| |-- index.ts
+|-- App.tsx
+|-- App.css
+|-- data.json
+|-- index.tsx
+|-- style/
+| |-- book.css
+| |-- bookList.css
 ```
